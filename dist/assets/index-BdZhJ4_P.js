@@ -1,0 +1,1 @@
+import{m as t,q as a,t as n,L as o,y as s}from"./index-BeSzdFXQ.js";const r={class:"page-content mb-5","element-loading-text":"加载中..."},l=t({name:"TemplateMap",__name:"index",setup(c){return(p,m)=>{const e=a("ArtMapChart");return n(),o("div",r,[s(e)])}}});export{l as default};

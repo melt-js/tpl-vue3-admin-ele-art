@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Art Design Pro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Art Design Pro - A modern admin dashboard template built with Vue 3, TypeScript, and Element Plus."
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon-8zt0VdJG.ico" />
+
+    <style>
+      /* 防止页面刷新时白屏的初始样式 */
+      html {
+        background-color: #fafbfc;
+      }
+
+      html.dark {
+        background-color: #070707;
+      }
+    </style>
+
+    <script>
+      // 初始化 html class 主题属性
+      ;(function () {
+        try {
+          if (typeof Storage === 'undefined' || !window.localStorage) {
+            return
+          }
+
+          const themeType = localStorage.getItem('sys-theme')
+          if (themeType === 'dark') {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (e) {
+          console.warn('Failed to apply initial theme:', e)
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="./assets/index-BeSzdFXQ.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <style>
+        #art-startup-loading {
+          position: fixed;
+          inset: 0;
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+        }
+
+        .dark #art-startup-loading {
+          background: #070707;
+        }
+
+        #art-startup-loading svg {
+          width: 40px;
+          height: 40px;
+          animation: art-startup-rotate 1.6s linear infinite;
+        }
+
+        #art-startup-loading circle {
+          fill: var(--theme-color, #5d87ff);
+          animation: art-startup-fade 1.6s infinite;
+        }
+
+        #art-startup-loading circle:nth-child(2) { animation-delay: 0.5s; }
+        #art-startup-loading circle:nth-child(3) { animation-delay: 1s; }
+        #art-startup-loading circle:nth-child(4) { animation-delay: 1.5s; }
+
+        @keyframes art-startup-rotate {
+          100% { transform: rotate(360deg); }
+        }
+
+        @keyframes art-startup-fade {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+      </style>
+      <div id="art-startup-loading" role="status" aria-label="正在加载应用">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="8" r="4"></circle>
+          <circle cx="32" cy="20" r="4"></circle>
+          <circle cx="20" cy="32" r="4"></circle>
+          <circle cx="8" cy="20" r="4"></circle>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
