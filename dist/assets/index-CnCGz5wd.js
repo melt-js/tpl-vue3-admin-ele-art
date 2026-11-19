@@ -1,1 +1,0 @@
-import{m as n,v as o,A as a,q as r,t as c}from"./index-BeSzdFXQ.js";const p=""+new URL("403-BdWuHcJA.svg",import.meta.url).href,l=n({name:"Exception403",__name:"index",setup(s){return(e,m)=>{const t=r("ArtException");return c(),o(t,{data:{title:"403",desc:e.$t("exceptionPage.403"),btnText:e.$t("exceptionPage.gohome"),imgUrl:a(p)}},null,8,["data"])}}});export{l as default};
